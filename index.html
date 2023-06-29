@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container my-3 py-3 bg-white rounded shadow">
+
+        <form id="task-form" class="container my-3 py-3 bg-white rounded shadow">
+            <h1 class="text-center">Lista de Tareas</h1>
+
+            <div class="form-group">
+                <input type="text" id="task-nombre" placeholder="Nombre de la tarea" required class="form-control">
+            </div>
+            <div class="form-group">
+                <textarea id="task-descripcion" placeholder="Descripción de la tarea" required class="form-control"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="task-start-date">Fecha de inicio</label>
+                    <input type="date" id="task-fechaInicio" required class="form-control">
+                </div>
+                <div class="col">
+                    <label for="task-end-date">Fecha de fin</label>
+                    <input type="date" id="task-fechaTermino" required class="form-control">
+                </div>
+            </div>
+            <div class="form-group"></div>
+            <div class="form-group">
+                <input type="number" id="task-nivelPrioridad" min="1" max="5" placeholder="Nivel de prioridad (1-5)" required class="form-control">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Agregar tarea</button>
+        </form>
+
+        <div class="container my-3 py-3 bg-white rounded shadow">
+            <div class="form-row">
+                <div class="col" id="todo-group">
+                    <h2 class="text-center">Por hacer</h2>
+                    <div class="col" id="hacer"></div>
+                </div>
+                <div class="col" id="doing-group">
+                    <h2 class="text-center">En proceso</h2>
+                    <div class="col" id="haciendo"></div>
+                </div>
+                <div class="col" id="done-group">
+                    <h2 class="text-center">Finalizadas</h2>
+                    <div class="col" id="hecho"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
